@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editing a comment</title>
+</head>
+
+<body>
+  <h1>Editing a comment</h1>
+  <h2> COmment ID :--- <%= fcom.id %>
+  </h2>
+  <form method="POST" action="/comments/<%= fcom.id %>?_method=PATCH">
+    <label for="name">Username</label>
+    <input type="text" name="name" id="name" placeholder="Username" value="<%= fcom.name %>" disabled>
+    <hr>
+    <label for="comment">Comment</label><br>
+    <textarea name="comment" cols="100" id="comment" rows="5">
+      <%= fcom.comment %>
+    </textarea>
+    <hr>
+    <button>
+      Create a new comment
+    </button>
+  </form>
+</body>
+
+</html>

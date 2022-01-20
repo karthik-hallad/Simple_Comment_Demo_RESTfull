@@ -1,0 +1,3 @@
+-> acc to the image create a place for comments
+-> after doing so handle the erros
+-> finally use bootstrap to create a sample virtual place

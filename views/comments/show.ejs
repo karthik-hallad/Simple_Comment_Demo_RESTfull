@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewing a comment</title>
+</head>
+
+<body>
+  <h1> Comment details </h1>
+  <hr>
+  <h3>Viewing the comment for comment id :- <b>
+      <%= fcom.id %>
+    </b> </h3>
+  <hr>
+  <p><b>Username</b> : <%= fcom.name %>
+  </p>
+  <hr>
+  <p><b>Comment</b> : <%= fcom.comment %>
+  </p>
+  <hr>
+  <form method="POST" action="/comments/<%= fcom.id %>?_method=Delete">
+    <button>Delete this comment</button>
+  </form>
+  <hr>
+  <a href="/comments/<%= fcom.id %>/edit">Edit this comment</a><br>
+  <a href="/comments">View all comments</a><br>
+  <a href="/">Home</a><br>
+  <hr>
+
+</body>
+
+</html>
